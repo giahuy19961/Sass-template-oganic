@@ -4,13 +4,18 @@
     gap: 0 25px;
     @include responsive("sm-screen") {
       flex-direction: column;
+      gap:25px;
     }
   }
   &-menu {
     display: flex;
     flex-direction: column;
     width: 25%;
-
+    
+    &--closed{
+      display: none;
+      // transition: all 0.7 linear;
+    }
     &-header {
       width: 100%;
       background-color: $primary-color;
@@ -23,6 +28,7 @@
       width: 100%;
       background-color: #fff;
       border: 1px solid $grey-light;
+      transition: all 0.5s ease-in-out;
     }
     &-item {
       color: $grey;
