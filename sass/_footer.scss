@@ -1,0 +1,79 @@
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &-wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    @include responsive("tablet") {
+      justify-content: space-between;
+    }
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    & > img {
+      flex-shrink: 0;
+    }
+    flex-direction: column;
+
+    &-item {
+      text-align: left;
+      padding: 5px 0;
+    }
+  }
+  &-link {
+    &-heading {
+      padding: 10px 0;
+      font-size: $fs-sm;
+      font-weight: 800;
+    }
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
+  &-social {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    &-heading {
+      padding: 10px 0;
+      font-size: $fs-sm;
+      font-weight: 800;
+    }
+    &-title {
+      color: $grey;
+      font-size: $fs-sm;
+      line-height: 22px;
+    }
+    &-form {
+      display: flex;
+      justify-content: space-between;
+
+      & button {
+        flex-shrink: 0;
+      }
+      & input {
+        flex: 1;
+        font-size: 16px;
+        padding: 10px 15px;
+        outline: none;
+        border: none;
+        &::placeholder {
+          font-weight: 300;
+          font-size: 16px;
+        }
+      }
+    }
+    &-list {
+      display: flex;
+      gap: 40px;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.header-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.subnav {
+  padding: 13px;
+  margin-bottom: 5px;
+  background-color: $grey-light;
+  display: flex;
+  justify-content: space-between;
+  @include responsive("tablet") {
+    display: none;
+  }
+  &-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-email,
+  &-social {
+    position: relative;
+    padding-right: 15px;
+
+    & > span {
+      padding-right: 10px;
+      cursor: pointer;
+      &:hover {
+        color: greenyellow;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      top: 0;
+      right: 7px;
+      background-color: $grey;
+      height: 20px;
+    }
+  }
+  &-broadcast {
+    padding-left: 5px;
+  }
+  &-login {
+    cursor: pointer;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 5px;
+
+  &-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    @include responsive("sm-screen") {
+      display: none;
+    }
+  }
+  &-item {
+    padding: 10px;
+    margin-left: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    & > a {
+      color: $grey;
+    }
+    & > a:hover,
+    &.active a {
+      color: $primary-color;
+    }
+  }
+
+  &-cart {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    @include responsive("sm-screen") {
+      display: none;
+    }
+  }
+  &-mobile {
+    border: 1px solid $grey;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 5px;
+    display: none;
+    & > ion-icon {
+      --ionicon-stroke-width: 36px;
+    }
+    @include responsive("sm-screen") {
+      display: block;
+    }
+  }
+}

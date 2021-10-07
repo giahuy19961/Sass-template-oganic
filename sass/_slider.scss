@@ -1,0 +1,29 @@
+.slider {
+  overflow-x: hidden;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    & img {
+      object-fit: contain;
+      height: 320px;
+      flex-shrink: 0;
+      width: 100%;
+    }
+    &-title {
+      color: $grey;
+      flex: 1;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+  @include responsive("tablet") {
+    padding: 0;
+    margin: 0 auto;
+  }
+  @include responsive("mobile") {
+    padding: 0;
+    margin: 0 auto;
+  }
+}

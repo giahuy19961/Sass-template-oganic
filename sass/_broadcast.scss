@@ -1,0 +1,12 @@
+.broadcast {
+  &-wrap {
+    display: flex;
+    gap: 40px;
+    @include responsive("tablet") {
+      flex-direction: column;
+    }
+  }
+  &-item {
+    flex: 1;
+  }
+}

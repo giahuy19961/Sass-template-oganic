@@ -1,0 +1,126 @@
+.banner {
+  &-wrap {
+    display: flex;
+    gap: 0 25px;
+    @include responsive("sm-screen") {
+      flex-direction: column;
+    }
+  }
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+
+    &-header {
+      width: 100%;
+      background-color: $primary-color;
+      color: #fff;
+      text-align: center;
+      padding: 20px 5px;
+      cursor: pointer;
+    }
+    &-list {
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid $grey-light;
+    }
+    &-item {
+      color: $grey;
+      text-align: left;
+      padding: 25px 5px 25px 80px;
+      cursor: pointer;
+      border-bottom: 1px solid $grey-light;
+    }
+    @include responsive("sm-screen") {
+      width: 100%;
+      &-item {
+        text-align: center;
+        padding: 25px 0;
+      }
+    }
+  }
+
+  // main
+  &-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    @include responsive("sm-screen") {
+      display: none;
+    }
+  }
+  &-search {
+    display: flex;
+    width: 70%;
+    &-categories {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5px 10px;
+      flex-shrink: 0;
+      border: 1px solid $grey-light;
+      & > span {
+        padding-right: 5px;
+      }
+    }
+    &-input {
+      flex: 1;
+      font-size: 16px;
+      padding: 5px 15px;
+      outline: none;
+      &::placeholder {
+        font-weight: 300;
+        font-size: 16px;
+      }
+    }
+  }
+  &-phone {
+    display: flex;
+
+    &-icon {
+      padding: 10px 5px;
+      width: 50px;
+      height: 50px;
+      margin-right: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $primary-color;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: currentColor;
+        opacity: 0.25;
+        border-radius: inherit;
+      }
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &-number {
+      font-weight: 600;
+    }
+    &-support {
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+  &-content {
+    & img {
+      object-fit: cover;
+      height: 600px;
+    }
+  }
+}

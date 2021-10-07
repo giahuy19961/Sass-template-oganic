@@ -1,0 +1,51 @@
+@mixin responsive($width) {
+  @if $width == "mobile" {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  } @else if $width == "lg-mobile" {
+    @media only screen and (max-width: $lg-mobile) {
+      @content;
+    }
+  } @else if $width == "tablet" {
+    @media only screen and (max-width: $tablet) {
+      @content;
+    }
+  } @else if $width == "sm-screen" {
+    @media only screen and (max-width: $sm-screen) {
+      @content;
+    }
+  } @else if $width == "lg-screen" {
+    @media only screen and (max-width: $lg-screen) {
+      @content;
+    }
+  }
+}
+
+@mixin responsiveMin($width) {
+  @if $width == "mobile" {
+    @media only screen and (min-width: $mobile) {
+      @content;
+    }
+  } @else if $width == "tablet" {
+    @media only screen and (min-width: $tablet) {
+      @content;
+    }
+  } @else if $width == "sm-screen" {
+    @media only screen and (min-width: $sm-screen) {
+      @content;
+    }
+  } @else if $width == "lg-screen" {
+    @media only screen and (min-width: $lg-screen) {
+      @content;
+    }
+  }
+}
+
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}

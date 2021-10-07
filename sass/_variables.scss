@@ -1,0 +1,28 @@
+$grey: #393e46;
+$grey-light: #b2b2b2;
+$primary-color: #7fad39;
+$text-color: #cccccc;
+$white-color: #fff;
+$btn-color: #fff;
+$btn-default-hover: #38a3a5;
+
+// screen
+$mobile: 380px;
+$lg-mobile: 527px;
+$tablet: 767px;
+$sm-screen: 1023px;
+$lg-screen: 1170px;
+
+// font-size
+$fs-lg: 36px; // for sm-heading
+$fs-nm: 24px;
+$fs-sm: 16px; // for text-sm
+$fs-xl: 46px; // for heading
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);

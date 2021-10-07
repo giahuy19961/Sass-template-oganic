@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+ul {
+  list-style: none;
+  display: block;
+  padding: 0;
+}
+li {
+  text-align: center;
+}
+
+section {
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}

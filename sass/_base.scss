@@ -1,0 +1,77 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: $grey;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1575px;
+  margin: 0 auto;
+  padding: 0 15px;
+  // @include responsive("tablet") {
+  //   padding: 0;
+  // }
+
+  @media screen and (max-width: 1600px) {
+    @include make-container(15px);
+  }
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.active {
+  color: $primary-color;
+}
+.font-size-lg {
+  font-size: $fs-lg !important;
+}
+.primary-text {
+  color: $primary-color;
+}
+// button
+.btn-primary {
+  width: auto;
+  padding: 5px 10px;
+  background-color: $primary-color;
+  outline: none;
+  border: 0;
+  height: 50px;
+  font-size: $fs-sm;
+
+  color: $btn-color;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $btn-default-hover;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  margin-top: 10px;
+  padding: 20px 5px 0 5px;
+  font-size: $fs-lg;
+  font-weight: bold;
+  position: relative;
+  @include responsive("mobile") {
+    font-size: 28px;
+  }
+  &::after {
+    content: "";
+    height: 3px;
+    width: 100px;
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $primary-color;
+  }
+}
+.logo {
+  max-width: 150px;
+  display: block;
+  object-fit: cover;
+  flex-shrink: 0;
+}
