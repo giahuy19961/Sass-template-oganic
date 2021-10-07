@@ -1,0 +1,25 @@
+.sidebar-mobile {
+  position: absolute;
+  top: 0;
+  display: flex;
+  left: -100%;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease;
+  --content-width: 360px;
+  &-content {
+    width: var(--content-width);
+    height: 100%;
+    background-color: #fff;
+  }
+  &-overlay {
+    width: calc(100% - var(--content-width));
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+}
+.sidebar-mobile--open {
+  transform: translateX(100%);
+}
